@@ -68,7 +68,7 @@ export function StoredUrls () {
         };
     };
  
-    const mainClasses = "mx-auto my-2 pt-2 max-w-3xl";
+    const mainClasses = "mx-auto my-2 pt-2";
 
     const articleClasses = "bg-teal-100 rounded-md flex flex-col md:flex-row justify-between my-2 p-2 text-center";
     const articleDivClasses = "truncate w-full block flex flex-col items-center justify-center truncate"
@@ -77,7 +77,7 @@ export function StoredUrls () {
     const articleDivButtonClasses = "bg-customGreen w-1/2 font-semibold text-white rounded-md my-1 h-7 hover:scale-110";
 
     return (
-        <main className={mainClasses}>
+        <div className={mainClasses}>
             {context.storedUrls.map((ele, index) => {
 
                 return (
@@ -110,6 +110,6 @@ export function StoredUrls () {
                     </article>
                 );
             })}
-        </main>
+        </div>
     );
 };

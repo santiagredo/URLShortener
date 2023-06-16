@@ -111,7 +111,7 @@ export function Main () {
         };
     };
 
-    const mainClasses = "w-11/12 mx-auto my-2 pt-2 max-w-lg";
+    const mainClasses = "w-11/12 mx-auto my-2 pt-2 max-w-2xl";
     const mainH1Classes = "text-center text-5xl text-customGreen font-semibold pt-5 pb-2.5 my-2";
     const mainPClasses = "text-center text-xl font-light my-2";
 

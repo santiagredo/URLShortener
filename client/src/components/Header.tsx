@@ -6,7 +6,7 @@ const linkedinIcon = new URL("../../public/linkedin.png", import.meta.url).href;
 export function Header () {
     const headerClasses = "w-full h-20 max-h-20 px-7 bg-customGreen text-white flex items-center justify-center";
 
-    const divClasses = "w-full max-w-lg flex items-center justify-between";
+    const divClasses = "w-full max-w-2xl flex items-center justify-between";
     const figureClasses = "w-8 hover:cursor-pointer hover:scale-110";
     const imgClasses = "w-full"; 
 

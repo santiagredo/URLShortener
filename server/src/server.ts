@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('*.css', function(req, res) {
     // console.log(`Serving CSS file: ${req.url}`);
-    res.sendFile(path.join(__dirname, "./public", req.url));
+    res.sendFile(path.join(__dirname, "../../client/dist", req.url));
 });
-app.use(express.static(path.join(__dirname, "./public")));
+app.use(express.static(path.join(__dirname, "../../client/dist")));
 
 routes(app);
 

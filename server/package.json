@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --config nodemon.json src/server.ts",
-    "build": "node deleteDist.mjs && tsc --build && tscp",
+    "build": "tsc --build",
     "execute": "npx pm2 start ./src/server.js",
     "monitor": "npx pm2 monit",
     "stop": "npx pm2 stop server",
@@ -20,8 +20,7 @@
     "@types/node": "^20.2.5",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
-    "typescript-cp": "^0.1.8"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "@types/cors": "^2.8.13",

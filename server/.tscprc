@@ -1,4 +1,0 @@
-{
-  "ignored_files": ["nodemon.json", "package-lock.json", "tsconfig.json", ".tscprc", "node_modules", "deleteDist.mjs"],
-  "compiled_files": ["**/*.ts"]
-}

@@ -1,17 +1,15 @@
-type Environment = "PRODUCTION" | "DEVELOPMENT";
+const isEnvironmentDevelopment = false;
+// const isEnvironmentDevelopment = true;
 
-// const environment: Environment = "DEVELOPMENT";
-const environment: Environment = "PRODUCTION";
-
-const shortenUrlApiCall = (environment === "DEVELOPMENT" as Environment)
+const shortenUrlApiCall = (isEnvironmentDevelopment)
     ? "http://localhost:3000/shorten/"  
     : "https://us-rinp.onrender.com/shorten";
 
-const checkStoredUrlsApiCall = (environment === "DEVELOPMENT" as Environment)   
+const checkStoredUrlsApiCall = (isEnvironmentDevelopment)   
     ? "http://localhost:3000/check/"  
     : "https://us-rinp.onrender.com/check";
 
-const deleteUrlApiCall = (environment === "DEVELOPMENT" as Environment)   
+const deleteUrlApiCall = (isEnvironmentDevelopment)   
     ? "http://localhost:3000/delete"  
     : "https://us-rinp.onrender.com/delete";
 

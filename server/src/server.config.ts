@@ -1,13 +1,11 @@
-type Environment =  "DEVELOPMENT" | "PRODUCTION";
+const isEnvironmentDevelopment = false;
+// const isEnvironmentDevelopment = true;
 
-// const environment = "DEVELOPMENT";
-const environment = "PRODUCTION";
-
-const SERVER_LINK_ADDRESS = (environment === "DEVELOPMENT" as Environment)  
+const SERVER_LINK_ADDRESS = (isEnvironmentDevelopment)  
     ? "http://localhost:3000/"  
     : "https://us-rinp.onrender.com/";
  
-const SERVER_LINK_ADDRESS_NOT_FOUND = (environment === "DEVELOPMENT" as Environment)   
+const SERVER_LINK_ADDRESS_NOT_FOUND = (isEnvironmentDevelopment)   
     ? "http://localhost:3000/404"  
     : "https://us-rinp.onrender.com/404";
 

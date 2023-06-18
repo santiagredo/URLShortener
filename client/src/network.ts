@@ -1,17 +1,19 @@
-const environment = "DEVELOPMENT";
-// const environment = "PRODUCTION";
+type Environment = "PRODUCTION" | "DEVELOPMENT";
 
-const shortenUrlApiCall = environment === "DEVELOPMENT" ?  
-    "http://localhost:3000/shorten/" : 
-    "https://us-rinp.onrender.com/shorten";
+// const environment: Environment = "DEVELOPMENT";
+const environment: Environment = "PRODUCTION";
 
-const checkStoredUrlsApiCall = environment === "DEVELOPMENT" ?  
-    "http://localhost:3000/check/" : 
-    "https://us-rinp.onrender.com/check";
+const shortenUrlApiCall = (environment === "DEVELOPMENT" as Environment)
+    ? "http://localhost:3000/shorten/"  
+    : "https://us-rinp.onrender.com/shorten";
 
-const deleteUrlApiCall = environment === "DEVELOPMENT" ?  
-    "http://localhost:3000/delete" : 
-    "https://us-rinp.onrender.com/delete";
+const checkStoredUrlsApiCall = (environment === "DEVELOPMENT" as Environment)   
+    ? "http://localhost:3000/check/"  
+    : "https://us-rinp.onrender.com/check";
+
+const deleteUrlApiCall = (environment === "DEVELOPMENT" as Environment)   
+    ? "http://localhost:3000/delete"  
+    : "https://us-rinp.onrender.com/delete";
 
 export const apiCalls = {
     shorten: shortenUrlApiCall,

@@ -1,13 +1,15 @@
-const environment = "DEVELOPMENT";
-// const environment = "PRODUCTION";
+type Environment =  "DEVELOPMENT" | "PRODUCTION";
 
-const SERVER_LINK_ADDRESS = environment === "DEVELOPMENT" ? 
-    "http://localhost:3000/" : 
-    "https://us-rinp.onrender.com/";
+// const environment = "DEVELOPMENT";
+const environment = "PRODUCTION";
+
+const SERVER_LINK_ADDRESS = (environment === "DEVELOPMENT" as Environment)  
+    ? "http://localhost:3000/"  
+    : "https://us-rinp.onrender.com/";
  
-const SERVER_LINK_ADDRESS_NOT_FOUND = environment === "DEVELOPMENT" ?  
-    "http://localhost:3000/404" : 
-    "https://us-rinp.onrender.com/404";
+const SERVER_LINK_ADDRESS_NOT_FOUND = (environment === "DEVELOPMENT" as Environment)   
+    ? "http://localhost:3000/404"  
+    : "https://us-rinp.onrender.com/404";
 
 export const serverConfiguration = {
     PORT: 3000,
